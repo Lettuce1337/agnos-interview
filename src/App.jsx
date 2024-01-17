@@ -1,8 +1,10 @@
 import './App.css';
 import {Route, createBrowserRouter, RouterProvider, createRoutesFromElements} from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
-import Finger from './component/Finger';
-import Stomach from './component/Stomach';
+import Finger from './components/Finger';
+import Stomach from './components/Stomach';
+import { partsContext } from './context/partsContext';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -11,12 +13,15 @@ const router = createBrowserRouter(
       <Route path='Finger' element={<Finger />}></Route>
     </Route>
   )
-);
-
+  );
+  
 function App() {
-
+  const parts = ['stomach','finger'];
+    
   return (
-    <RouterProvider router={router} />
+    <partsContext.Provider value={ {parts} }>
+      <RouterProvider router={router} />
+    </partsContext.Provider>
   )
 }
 
