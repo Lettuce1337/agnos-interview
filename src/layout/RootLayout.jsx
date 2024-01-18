@@ -12,8 +12,8 @@ function RootLayout() {
   },[location.pathname])
 
   return (
-    <div className='m-[2rem]'>
-        <div className="min-w-[350px] w-fit h-fit flex justify-center items-center rounded-3xl
+    <div className='m-[2rem] relative'>
+        <div className="min-w-[350px] flex justify-center items-center rounded-3xl
                           shadow-xl flex-col relative overflow-clip">
           <Outlet context={{selected,setSelected}}/>
         </div>

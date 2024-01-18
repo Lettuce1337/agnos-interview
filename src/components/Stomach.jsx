@@ -13,7 +13,11 @@ function Stomach() {
       <div className='flex justify-center items-center relative'>
         <img src={stomach} className='w-[70%] h-[70%]'/>
         <svg width='12%' height='12%' viewBox="0 0 109 137" fill="none" xmlns="http://www.w3.org/2000/svg" 
-              className='absolute bottom-[52%] right-[45%]'>
+              className='absolute bottom-[53%] right-[45%]'>
+          <path d="M1 69C3 40 22.4 -13.6 84 4C161 26 29 244 1 69Z" stroke="black" fill="white" opacity='70%' onClick={()=>{console.log('click!')}} />
+        </svg>
+        <svg width='12%' height='12%' viewBox="0 0 109 137" fill="none" xmlns="http://www.w3.org/2000/svg" 
+              className='absolute bottom-[30%] right-[45%]'>
           <path d="M1 69C3 40 22.4 -13.6 84 4C161 26 29 244 1 69Z" stroke="black" fill="white" opacity='70%' onClick={()=>{console.log('click!')}} />
         </svg>
       </div>
