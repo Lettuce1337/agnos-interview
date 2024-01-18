@@ -1,17 +1,24 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import ContinueButton from '../components/ContinueButton'
 
 
 function RootLayout() {
+  const [selected,setSelected] = useState(null);
+  const location = useLocation();
+
+  useEffect(()=>{
+    setSelected(null)
+  },[location.pathname])
+
   return (
     <div className='m-[2rem]'>
         <div className="min-w-[350px] w-fit h-fit flex justify-center items-center rounded-3xl
-                          shadow-xl flex-col relative">
-          <Outlet/>
+                          shadow-xl flex-col relative overflow-clip">
+          <Outlet context={{selected,setSelected}}/>
         </div>
 
-        <ContinueButton />
+        <ContinueButton selected={selected}/>
     </div>
   )
 }

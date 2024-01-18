@@ -1,13 +1,11 @@
 import React from 'react'
 
-function OtherButton({text}) {
+function OtherButton({text, setSelected}) {
 
   return (
-    <div className='bg-white absolute w-full text-center bottom-0'>
-        <button className='w-fit py-[1em] px-[3em] rounded-full bg-blue-400'>
-            <p className='text-[2.2rem]'>{text}</p>
-        </button>
-    </div>
+    <button className='rounded-full bg-blue-400 px-[1rem] py-[.5rem]' onClick={()=>setSelected('all')}>
+      <p className='text-[1.5rem] max-md:text-[1rem] max-[480px]:text-[.75rem]'>{text}</p>
+    </button>
   )
 }
 
