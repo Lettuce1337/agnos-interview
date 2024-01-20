@@ -1,23 +1,23 @@
 import React, { Children, cloneElement, isValidElement, useEffect, useState } from 'react'
 
-function Interactable({children, id, selected, setSelected}) {
+function Interactable({children, id, selected, setSelected, bg, stroke}) {
 
   const [fill,setFill] = useState('white');
 
   useEffect(()=>{
-    setFill(selected===id || selected==='all'? 'pink':'white');
+    setFill(selected===id || selected==='all'? bg:'white');
   },[selected])
-
   return (
     <>
     {React.Children.map(children,(child)=>{
         if(!isValidElement(child)){
             return null;
         }
-        
+
         return cloneElement(child, 
             {...child.props,
             fill:fill,
+            stroke:stroke,
             onClick: () => {setSelected(id);}
             })
         })}
