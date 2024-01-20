@@ -11,7 +11,7 @@ function ContinueButton({selected}) {
     const pos = path.pathname === '/'? 0:parts.indexOf(path.pathname.slice(1));
     
     return (
-    <button className='w-full text-center p-[1rem] bg-blue-300 my-5 rounded-3xl text-black font-bold
+    <button className='w-full text-center p-[1rem] bg-agnosblue my-5 rounded-3xl text-black font-bold
                      disabled:text-gray-600 disabled:bg-gray-300
                        transition'
             disabled={selected===null || pos===parts.length-1}

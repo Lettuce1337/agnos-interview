@@ -1,12 +1,8 @@
-import React, { Children, cloneElement, isValidElement, useEffect, useState } from 'react'
+import React, { cloneElement, isValidElement } from 'react'
 
 function Interactable({children, id, selected, setSelected, bg, stroke}) {
 
-  const [fill,setFill] = useState('white');
 
-  useEffect(()=>{
-    setFill(selected===id || selected==='all'? bg:'white');
-  },[selected])
   return (
     <>
     {React.Children.map(children,(child)=>{
@@ -16,7 +12,7 @@ function Interactable({children, id, selected, setSelected, bg, stroke}) {
 
         return cloneElement(child, 
             {...child.props,
-            fill:fill,
+            fill:selected===id || selected==='all'? bg:'white',
             stroke:stroke,
             onClick: () => {setSelected(id);}
             })
