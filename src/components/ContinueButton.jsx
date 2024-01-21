@@ -17,7 +17,7 @@ function ContinueButton({selected}) {
             disabled={selected===null || pos===parts.length-1}
             onClick={()=> navigate(parts[pos+1])}>
 
-        <p className="text-[1.5rem] max-[480px]:text-[1rem]">ต่อไป</p>
+        <p className="text-[1.5rem] max-[480px]:text-[1rem] font-medium">ต่อไป</p>
     </button>
   )
 }

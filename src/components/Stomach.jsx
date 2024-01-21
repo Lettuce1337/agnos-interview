@@ -15,8 +15,8 @@ function Stomach() {
       <div className='flex justify-center items-center relative'>
         <img src={stomach} className='w-[70%] h-[70%]'/>
 
-        <StomachCaptions selected={selected}></StomachCaptions>
-        <StomachBlobs selected={selected} setSelected={setSelected}/>
+        <StomachCaptions selected={selected} />
+        <StomachBlobs selected={selected} setSelected={setSelected} />
 
       </div>
       <div className='w-full h-1/6 bg-white absolute bottom-0 flex justify-center items-center'>

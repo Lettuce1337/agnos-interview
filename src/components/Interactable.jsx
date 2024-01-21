@@ -1,6 +1,6 @@
 import React, { cloneElement, isValidElement } from 'react'
 
-function Interactable({children, id, selected, setSelected, bg, stroke}) {
+function Interactable({children, id, selected, setSelected, bg, stroke, opacity}) {
 
 
   return (
@@ -13,6 +13,8 @@ function Interactable({children, id, selected, setSelected, bg, stroke}) {
         return cloneElement(child, 
             {...child.props,
             fill:selected===id || selected==='all'? bg:'white',
+            fillOpacity:opacity,
+            strokeOpacity:opacity,
             stroke:stroke,
             onClick: () => {setSelected(id);}
             })

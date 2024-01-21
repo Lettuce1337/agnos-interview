@@ -1,4 +1,3 @@
-import React from 'react'
 import luq from '../assets/active/luq-active.png'
 import llq from '../assets/active/llq-active.png'
 import ruq from '../assets/active/ruq-active.png'
