@@ -1,8 +1,5 @@
-# React + Vite
+This repository's purpose is to be used in part of Agnos's front-end internship interview.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Source code created by: Sirivarakul Jiropakarn
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ALL PICTURES INCLUDED ARE A PART OF AGNOS AND ARE NOT PERMITTED TO BE USED OUTSIDE OF INTERVIEW PURPOSES.
